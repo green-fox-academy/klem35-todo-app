@@ -1,7 +1,7 @@
 package todoapplication;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ApplicationException {
 
         Todo todo = new Todo("src/todoapplication/tasks.txt");
 
@@ -12,14 +12,17 @@ public class Main {
         System.out.println("\t -c   Completes a task");
 
         if (args[0].equals("-l")) {
-            todo.getListOfTasks();
+            todo.displayListOfTasks();
         } else if (args[0].equals("-a")) {
             try {
                 Task task = new Task(args[1]);
                 todo.addTask(task);
             } catch (Exception e) {
-                System.err.println("Unable to add: no task provided");
+                throw new ApplicationException("Unable to add: no task provided", e);
             }
+        } else if (args[0].equals("-c")) {
+
         }
     }
 }
+
