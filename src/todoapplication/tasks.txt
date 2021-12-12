@@ -1,3 +1,2 @@
-Walk the dog
-Buy milk
-Do homework
+[_] Walk the dog
+[_] Do homework
