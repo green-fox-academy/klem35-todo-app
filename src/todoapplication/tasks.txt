@@ -1,2 +1,2 @@
-[_] Walk the dog
+[X] Walk the dog
 [_] Do homework
